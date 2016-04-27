@@ -1,0 +1,23 @@
+{
+  "name": "woverlay",
+  "version": "0.0.1",
+  "description": "WebRTC based overlay network.",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelwoodson/woverlay.git"
+  },
+  "keywords": [
+    "webrtc",
+    "overlay"
+  ],
+  "author": "Michael Woodson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaelwoodson/woverlay/issues"
+  },
+  "homepage": "https://github.com/michaelwoodson/woverlay#readme"
+}
