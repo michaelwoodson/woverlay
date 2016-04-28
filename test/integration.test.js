@@ -3,6 +3,7 @@
 const PORT = 5001;
 process.env.PORT = PORT;
 let server = require('../lib/server.js');
+server.startup();
 
 let browserify = require('browserify');
 let run = require('tape-run');
