@@ -1,8 +1,8 @@
 "use strict"
 
 let test = require('tape');
-let LocalID = require('../public/js/localid').LocalID;
-let Overlay = require('../public/js/overlay').Overlay;
+let LocalID = require('../lib/localid').LocalID;
+let Overlay = require('../lib/overlay').Overlay;
 
 const PORT = 5001;
 const SECONDS_TO_WAIT = 10;
