@@ -1,5 +1,4 @@
 #!/bin/bash
-cd int_test
 :>| failure.hammer.log
 :>| success.hammer.log
 counter=0

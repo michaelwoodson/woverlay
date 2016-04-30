@@ -5,7 +5,7 @@ let test = require('tape');
 const PORT = 5001;
 process.env.PORT = PORT;
 
-let server = require('../lib/server.js');
+let server = require('../lib/server');
 let browserify = require('browserify');
 let run = require('tape-run');
 
