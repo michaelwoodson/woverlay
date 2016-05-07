@@ -1,6 +1,7 @@
 "use strict"
 
 let intTest = require('./lib/int.test');
+let waitFor = require('./lib/wait.for');
 
 const PORT = 5001;
 
@@ -9,8 +10,6 @@ intTest(__filename, PORT, () => {
 
 	let LocalID = require('../lib/localid').LocalID;
 	let Overlay = require('../lib/overlay').Overlay;
-
-	const SECONDS_TO_WAIT = 10;
 
 	test('subordinate connections', function(t) {
 		let localid = new LocalID(true);
@@ -38,19 +37,6 @@ intTest(__filename, PORT, () => {
 			t.end()
 		});
 	});
-
-	function waitFor(assertion) {
-		return new Promise((resolve, reject) => {
-			let counter = 0;
-			setInterval(() => {
-				if (assertion()) {
-					resolve();
-				} else if (counter++ >= SECONDS_TO_WAIT) {
-					reject();
-				}
-			}, 1000);
-		});
-	}
 
 	function makeOverlay(localid) {
 		let overlay = new Overlay(localid, 'ws://localhost:' + PORT + '/');
