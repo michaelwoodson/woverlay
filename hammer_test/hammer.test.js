@@ -11,7 +11,7 @@ let run = require('tape-run');
 
 server.startup();
 
-browserify('./browser.hammer.js').ignore('ws').bundle().pipe(run()).on('results', (results) => {
+browserify('./browser.hammer.js').bundle().pipe(run()).on('results', (results) => {
 	if (!results.ok) {
 		process.exit(1);
 	}
