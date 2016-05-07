@@ -28,9 +28,8 @@
     "ws": "1.1.0"
   },
   "devDependencies": {
-    "browserify": "^13.0.0",
-    "electron-prebuilt": "^0.37.7",
-    "proxyquire": "^1.7.3",
+    "browserify": "^13.0.1",
+    "electron-prebuilt": "^0.37.8",
     "tape": "^4.5.1",
     "tape-run": "^2.1.3"
   },
