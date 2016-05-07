@@ -1,7 +1,7 @@
 "use strict"
 
 let test = require('tape');
-let idmaker = require('./idmaker');
+let idmaker = require('./lib/idmaker');
 let Overlay = require('../lib/overlay').Overlay;
 let LocalID = require('../lib/localid').LocalID;
 

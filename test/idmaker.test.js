@@ -1,7 +1,7 @@
 "use strict"
 
 let test = require('tape');
-let idmaker = require('./idmaker');
+let idmaker = require('./lib/idmaker');
 
 test('make id', function(t) {
 	let testId = idmaker('c3');
