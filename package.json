@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "browserify": "^13.0.1",
-    "electron-prebuilt": "^0.37.8",
+    "electron-prebuilt": "^1.0.0",
     "tape": "^4.5.1",
     "tape-run": "^2.1.3"
   },
