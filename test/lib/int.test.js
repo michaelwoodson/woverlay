@@ -15,7 +15,7 @@ module.exports = function(moduleName, port, testFunction) {
 
 		let settings = {};
 		// use chrome for debugging
-		// let settings = {browser:'chrome'}
+		//let settings = {browser:'chrome'}
 
 		browserify(require.resolve('../' + path.basename(moduleName)), {debug: true}).ignore('browserify').ignore('tape-run').ignore('path').bundle().pipe(run(settings)).on('results', (results) => {
 			if (!results.ok) {
