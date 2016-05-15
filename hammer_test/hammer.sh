@@ -4,7 +4,7 @@
 counter=0
 for i in `seq 1 $1`;
 do
-	node hammer.test.js &>singlerun.log
+	node ../test/dht.int.test.js &>singlerun.log
 	if [ $? -eq 0 ]
 	then
 		cat singlerun.log >> success.hammer.log

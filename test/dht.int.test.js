@@ -4,7 +4,6 @@ let intTest = require('./lib/int.test');
 let waitFor = require('./lib/wait.for');
 
 const PORT = 5005;
-// Note: sha256('foo') -> 2c26b46b68ffc68ff99b453c1d30413413422d706483bfa0f98a5e886266e7ae
 intTest(__filename, PORT, () => {
 	let test = require('tape');
 
@@ -23,7 +22,7 @@ intTest(__filename, PORT, () => {
 	});
 
 	test('dht', function(t) {
-		const WAIT_TIME = 240000;
+		const WAIT_TIME = 60;
 		let o60e53 = overlayMap.get('60e53');
 		waitFor(()=>{
 			let pendingCount = overlays.map(o => o.pendingEnvelopes.length).reduce((a,b) => a+b);
@@ -39,9 +38,16 @@ intTest(__filename, PORT, () => {
 			return waitFor(() => o60e53.flood[4].indexOf('7268d') == 0, WAIT_TIME);
 		}).then(() => { 
 			t.pass('got peer on right');
+			console.log('finger length: ' + o60e53.fingers.length);
+			console.log('fingers: ' + idhelper.shortArray(o60e53.fingers))
 			return waitFor(() => overlays.map(o => o.flood.length).reduce((a,b)=>a+b) == overlays.length * 5, WAIT_TIME);
 		}).then(() => { 
+			// Note: sha256('foo') -> 2c26b46b68ffc68ff99b453c1d30413413422d706483bfa0f98a5e886266e7ae
 			t.pass('all floods created');
+			return waitFor(() => o60e53.fingers.length === 3);
+		}).then(() => { 
+			// Note: sha256('foo') -> 2c26b46b68ffc68ff99b453c1d30413413422d706483bfa0f98a5e886266e7ae
+			t.pass('all fingers created');
 			return o60e53.put('foo', 'bar');
 		}).then(() => {
 			t.pass('put value into dht');

@@ -11,8 +11,8 @@ function waitFor(assertion, secondsToWait = DEFAULT_SECONDS_TO_WAIT) {
 				resolve();
 				clearInterval(handle);
 			} else if (counter++ >= secondsToWait) {
-				reject();
 				clearInterval(handle);
+				reject(`Waited: ${secondsToWait}, interval cleared, rejected.`);
 			}
 		}, 1000);
 	});

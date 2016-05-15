@@ -10,7 +10,7 @@ Once the module is stabilized I'll document the api.
 
 The w in "woverlay" is for WebRTC; woverlay is a peer 2 peer overlay network built on WebRTC.
 Depending on your disposition you can read it as a Keanu Reeves "woah" or a more shakespearean "woe".
-The network is similar to a Chord network, substitute "vertical" for "finger".
+The network is similar a variant of a "Chord" network.
 
 The architecture uses a central websocket server for bootstrapping into the network.
 Once a peer is bootstrapped it uses WebRTC for building the rest of the network and signaling, so the load on the server should be minimal.
