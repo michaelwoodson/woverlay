@@ -38,11 +38,8 @@ intTest(__filename, PORT, () => {
 			return waitFor(() => o60e53.flood[4].indexOf('7268d') == 0, WAIT_TIME);
 		}).then(() => { 
 			t.pass('got peer on right');
-			console.log('finger length: ' + o60e53.fingers.length);
-			console.log('fingers: ' + idhelper.shortArray(o60e53.fingers))
 			return waitFor(() => overlays.map(o => o.flood.length).reduce((a,b)=>a+b) == overlays.length * 5, WAIT_TIME);
 		}).then(() => { 
-			// Note: sha256('foo') -> 2c26b46b68ffc68ff99b453c1d30413413422d706483bfa0f98a5e886266e7ae
 			t.pass('all floods created');
 			return waitFor(() => o60e53.fingers.length === 3);
 		}).then(() => { 
