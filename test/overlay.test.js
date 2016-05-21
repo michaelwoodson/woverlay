@@ -35,3 +35,10 @@ test('in flood range', function(t) {
 	t.ok(overlay.inFloodRange(idmaker('88')), 'everything in range in small network');
 	t.end();
 });
+
+test ('pick finger', function(t) {
+	let overlay = new Overlay();
+	let bestFinger = overlay.bestFinger(idmaker('00'), 0, idmaker('80'), idmaker('70'));
+	t.ok(bestFinger.substring(0,2) == '80', 'pick best finger');
+	t.end();
+});
