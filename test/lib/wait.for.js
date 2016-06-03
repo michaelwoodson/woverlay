@@ -1,3 +1,4 @@
+"use strict";
 
 const DEFAULT_SECONDS_TO_WAIT = 10;
 

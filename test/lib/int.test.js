@@ -1,5 +1,4 @@
-"use strict"
-
+"use strict";
 
 module.exports = function(moduleName, port, testFunction) {
 	if (typeof window === 'undefined') {

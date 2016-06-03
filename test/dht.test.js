@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 let test = require('tape');
 let Overlay = require('../lib/overlay').Overlay;

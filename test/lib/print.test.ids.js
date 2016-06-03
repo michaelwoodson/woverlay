@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 let LocalID = require('../lib/localid').LocalID;
 

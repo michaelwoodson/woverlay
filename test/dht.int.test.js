@@ -55,7 +55,7 @@ intTest(__filename, PORT, () => {
 		}).catch((e) => {
 			console.log('failed: ' + e);
 			t.fail('failed waiting for dht');
-			t.end()
+			t.end();
 		});
 	});
 

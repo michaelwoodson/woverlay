@@ -1,0 +1,12 @@
+{
+	"esversion": 6,
+	"browser": true,
+	"browserify": true,
+	"node": true,
+	"globals": {
+		"webkitRTCPeerConnection": false,
+		"RTCPeerConnection": false,
+		"RTCSessionDescription": false,
+		"RTCIceCandidate": false
+	}
+}

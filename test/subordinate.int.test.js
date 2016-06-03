@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 let intTest = require('./lib/int.test');
 let waitFor = require('./lib/wait.for');
@@ -25,7 +25,7 @@ intTest(__filename, PORT, () => {
 			var differentIdOverlay = makeOverlay(new LocalID(true));
 			return waitFor(() => differentIdOverlay.status.initialized);
 		}).then(() => { 
-			t.pass('made overlay connection with different id')
+			t.pass('made overlay connection with different id');
 			overlay1.websocket.disconnect();
 			var overlay4 = makeOverlay(new LocalID(false, localid));
 			return waitFor(() => !overlay1.status.subordinateMode && overlay4.status.subordinateMode);
@@ -34,7 +34,7 @@ intTest(__filename, PORT, () => {
 			t.end();
 		}).catch(() => {
 			t.fail('failed making subordinates');
-			t.end()
+			t.end();
 		});
 	});
 
