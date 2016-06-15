@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /*
 
@@ -9,6 +9,8 @@
 bec06, c2266, e1794, e323b, ee87f
 
 */
+
+/* eslint-disable */
 
 module.exports = [
 	"{\"id\":\"05b8a2dfaef032bd21967c6097249cc004bf92c171d1c5aae960cc4fdfc1ff1c\",\"exportedKey\":\"-----BEGIN RSA PRIVATE KEY-----\\nMIIBOgIBAAJBAJCdxMWTPCBMNGbTSR6PYO/08xqKWBfHD0NrS8EGnzyMyy5VF3Mm\\neVoYLVbxZH/6sQGog7lpu0ourNT0TMHT+pUCAwEAAQJAC8Cmkx/qDP3kbE7TbGZe\\njGGtuARyMEx/Ew2PNHqjSjpPRdDHuCrePQ5GJksAARnKXqvI8LXj5JDorDPurDuM\\n6QIhAOF7VRUMdbdL4GKiJQu/43+qFieYLTlH0ynVV31oILqbAiEApDCLztQoInrS\\nmlMSmuJrbhNPeHcK3+iONcA7e2tIGo8CIAJW7UMSpgYI24Mqe4frrcidUy2F/rIh\\ndKdydz3t3qkRAiAvyd13drKzznHr7w/0OsCwCjjQRD3LDAIQTQJDGueiqwIhALDJ\\nphEDxjY+Su0QX7gRqx56KrnoX+qyYJX67YZnIIz+\\n-----END RSA PRIVATE KEY-----\",\"publicName\":\"Tester\"}",
@@ -38,3 +40,4 @@ module.exports = [
 	"{\"id\":\"ee87f637cb0d4b154ca4913f95300519684c29d0a89f165ed327c9d43014f358\",\"exportedKey\":\"-----BEGIN RSA PRIVATE KEY-----\\nMIIBOgIBAAJBAK/PoydL2cw59aOCGWaa/Tx3iRuQC6c4sPRD00+kBf29t7jfC4pl\\nAScqBEEu8TrDuQ8KPwwa2f18mUwX6u8Y7h8CAwEAAQJBAJuEXJpCKmLRUkxUpQty\\nRlfalVngTa6aI02vQZjNSs9sKbkSexWhQEYRXS3mGvOK5OP95Qf7osTtmFjXNaBu\\nuGECIQD8bKqMdvuzCe5UM20sFaKXkrlds5lOzauG59oqqcUs+wIhALJNKHL1QgfD\\nPz3O5RyFJCG4XDdA8JDIn62ynfRPRTItAiBY4VpcAzk1HXYRp9n0/9k0TbF/UNHW\\ncYzH/7NN+mE3KQIgc52UnPZr2pzAZVPDPLsYssTZBvsVAs0UvY0U31aHiAECIB6Q\\nYrxTGSxv7S+EKTR2pj4YuPudX4827VIq57lF15tZ\\n-----END RSA PRIVATE KEY-----\",\"publicName\":\"Tester\"}"
 ];
 
+/* eslint-enable */

@@ -1,9 +1,8 @@
-"use strict";
+'use strict';
 
 let test = require('tape');
 let idmaker = require('./lib/idmaker');
 let Overlay = require('../lib/overlay').Overlay;
-let LocalID = require('../lib/localid').LocalID;
 
 test('wrap index', function(t) {
 	t.ok(Overlay.wrapIndex(-2, 10) == 8, 'negative index wrapped');

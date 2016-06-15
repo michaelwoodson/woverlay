@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 module.exports = function(moduleName, port, testFunction) {
 	if (typeof window === 'undefined') {
@@ -22,7 +22,8 @@ module.exports = function(moduleName, port, testFunction) {
 			}
 			server.shutdown();
 		}).pipe(process.stdout);
+		return server;
 	} else {
 		testFunction();
 	}
-}
+};

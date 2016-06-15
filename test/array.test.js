@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 let test = require('tape');
 let array = require('../lib/array');

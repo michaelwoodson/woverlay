@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 let intTest = require('./lib/int.test');
 let waitFor = require('./lib/wait.for');
@@ -43,4 +43,4 @@ intTest(__filename, PORT, () => {
 		overlay.connect();
 		return overlay;
 	}
-})
+});
