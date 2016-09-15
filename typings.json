@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "big-integer": "registry:npm/big-integer#1.6.15+20160501004755",
+    "tape": "registry:npm/tape#4.0.0+20160723033700"
+  }
+}
