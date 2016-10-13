@@ -17,10 +17,10 @@ intTest(__filename, PORT, () => {
 
 	test('badnet', function(t) {
 		const WAIT_TIME = 60;
-		waitFor(()=> o0.flood.length == 2, WAIT_TIME)
+		waitFor(()=> o0.flood.length === 2, WAIT_TIME)
 		.then(() => {
 			t.pass('first golden');
-			return waitFor(() => o1.flood.length == 2, WAIT_TIME);
+			return waitFor(() => o1.flood.length === 2, WAIT_TIME);
 		}).then(() => {
 			t.pass('second golden');
 			let o2 = makeOverlay(localid2);
