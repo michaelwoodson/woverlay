@@ -23,6 +23,10 @@ intTest(__filename, PORT, () => {
 	test('dht', function(t) {
 		const WAIT_TIME = 60;
 		let o60e53 = overlayMap.get('60e53');
+		//setTimeout(() => {
+		//	console.log('printing overlays');
+		//	overlays.forEach(o => o.print());
+		//}, 30 * 1000);
 		waitFor(()=>{
 			//let pendingCount = overlays.map(o => o.pendingEnvelopes.length).reduce((a,b) => a+b);
 			//let floodCount = overlays.map(o => o.flood.length).reduce((a,b) => a+b);
