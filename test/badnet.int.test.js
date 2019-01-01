@@ -17,7 +17,9 @@ intTest(__filename, PORT, () => {
 
 	test('badnet', function(t) {
 		const WAIT_TIME = 60;
-		waitFor(()=> o0.flood.length === 2, WAIT_TIME)
+		waitFor(()=> {
+			return o0.flood.length === 2;
+		}, WAIT_TIME)
 		.then(() => {
 			t.pass('first golden');
 			return waitFor(() => o1.flood.length === 2, WAIT_TIME);
@@ -37,7 +39,6 @@ intTest(__filename, PORT, () => {
 
 	function makeOverlay(localid) {
 		let overlay = new Overlay(localid, 'ws://localhost:' + PORT + '/');
-		overlay.connect();
 		let oldSend = overlay.websocket.send;
 		overlay.websocket.send = function (to) {
 			if (to !== localid2.id) {
@@ -45,8 +46,8 @@ intTest(__filename, PORT, () => {
 			} else {
 				console.log('bam! ' + to);
 			}
-			//overlay.oldSend(envelope);
 		};
+		overlay.connect();
 		return overlay;
 	}
 }, (server) => server.setProbationTimeout(2));

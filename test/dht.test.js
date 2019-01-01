@@ -13,8 +13,10 @@ test('dht with no peers', function(t) {
 	}).then((result) => {
 		t.ok('bar' == result[overlay.localid.id], 'lookup succeeded');
 		t.end();
+		overlay.shutdown();
 	}).catch((error) => {
 		t.fail(error);
 		t.end();
+		overlay.shutdown();
 	});
 });

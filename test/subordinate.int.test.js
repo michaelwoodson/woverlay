@@ -15,25 +15,25 @@ intTest(__filename, PORT, () => {
 		let localid = new LocalID(true);
 		let overlay1 = makeOverlay(localid);
 		let overlay2 = makeOverlay(new LocalID(false, localid));
-		waitFor(()=>!overlay1.status.subordinateMode && overlay2.status.subordinateMode)
+		waitFor(()=>!overlay1.status.subordinateMode && overlay2.status.subordinateMode, 30)
 		.then(() => {
 			t.pass('overlay 2 became subordinate');
 			var overlay3 = makeOverlay(new LocalID(false, localid));
-			return waitFor(() => !overlay1.status.subordinateMode && overlay3.status.subordinateMode);
+			return waitFor(() => !overlay1.status.subordinateMode && overlay3.status.subordinateMode, 30);
 		}).then(() => {
 			t.pass('overlay 3 became subordinate');
 			var differentIdOverlay = makeOverlay(new LocalID(true));
-			return waitFor(() => differentIdOverlay.status.initialized);
+			return waitFor(() => differentIdOverlay.status.initialized, 30);
 		}).then(() => { 
 			t.pass('made overlay connection with different id');
-			overlay1.websocket.disconnect();
+			//overlay1.websocket.disconnect();
 			var overlay4 = makeOverlay(new LocalID(false, localid));
-			return waitFor(() => !overlay1.status.subordinateMode && overlay4.status.subordinateMode);
+			return waitFor(() => !overlay1.status.subordinateMode && overlay4.status.subordinateMode, 30);
 		}).then(() => {
 			t.pass('overlay 4 became subordinate');
 			t.end();
 		}).catch(() => {
-			t.fail('failed making subordinates');
+			t.fail('failed making subordinates: ');
 			t.end();
 		});
 	});

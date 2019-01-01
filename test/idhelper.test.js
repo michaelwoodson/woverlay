@@ -12,7 +12,13 @@ test('closest', function(t) {
 });
 
 
-test('converttoidstring', function(t) {
+test('convert to id string', function(t) {
 	t.equals(idhelper.convertToIdString('1'), '00000000000000000000000000000000000000000000000000000000000000001', 'zero padding');
+	t.end();
+});
+
+test('yield to id', function(t) {
+	t.ok(idhelper.yieldToId(idmaker('01'), idmaker('02')), 'should yield to the right');
+	t.ok(!idhelper.yieldToId(idmaker('02'), idmaker('01')), 'should yield to the right (distance wraps)');
 	t.end();
 });

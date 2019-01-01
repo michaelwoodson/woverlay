@@ -17,8 +17,8 @@ module.exports = function(moduleName, port, testFunction, serverCallback) {
 
 		let settings = {};
 		// use chrome for debugging
-		// let settings = {browser:'chrome', keepOpen: false}
-		//let settings = {browser:'firefox', keepOpen: false}
+		//let settings = {browser:'chrome', keepOpen: false};
+		//let settings = {browser:'firefox', keepOpen: false};
 
 		browserify(require.resolve('../' + path.basename(moduleName)), {debug: true}).ignore('browserify').ignore('tape-run').ignore('path').bundle().pipe(run(settings)).on('results', (results) => {
 			if (!results.ok) {
