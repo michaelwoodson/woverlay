@@ -1,6 +1,6 @@
 {
   "name": "woverlay",
-  "version": "0.0.39",
+  "version": "0.0.40",
   "description": "WebRTC based overlay network.",
   "main": "index.js",
   "scripts": {
