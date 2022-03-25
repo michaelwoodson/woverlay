@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "browserify": "^17.0.0",
-    "electron": "^11.2.1",
+    "electron": "^13.6.6",
     "tape": "^5.1.1",
     "tape-run": "^8.0.0"
   },
